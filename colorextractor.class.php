@@ -58,6 +58,9 @@ class ColorExtractor {
         }
         $imgWidth  = $det[0];
         $imgHeight = $det[1];
+        // fix for images already < 200px
+        $newWidth = $imgWidth;
+        $newHeight = $imgHeight;
         if ($imgWidth > $maxWidth || $imgHeight > $maxHeight) {
             if ($imgWidth > $imgHeight) {
                 $newWidth  = $maxWidth;
